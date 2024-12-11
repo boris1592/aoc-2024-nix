@@ -22,7 +22,10 @@ let
         [ first ]
       else
         [ (first + (builtins.head others)) ] ++ (builtins.tail others);
+
+  abs = num: if num >= 0 then num else -num;
 in {
   zip = zip;
   splitBy = splitBy;
+  abs = abs;
 }
