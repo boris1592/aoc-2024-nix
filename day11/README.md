@@ -1,0 +1,1 @@
+Solved it with Zig. I'm pretty sure, part 2 might be impossible with nix, since it doesn't have any efficient way of memoizing function return values (even though all of them are pure) like Haskell does (using mutability under the hood).

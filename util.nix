@@ -55,6 +55,11 @@ let
       { };
 
   orDefault = option: val: if option ? val then option.val else val;
+
+  # this produces wrong output with negative numbers but i don't care
+  mod = a: b: let c = a / b; in a - b * c;
+
+  pow = a: b: if b < 1 then 1 else a * (pow a (b - 1));
 in {
   inherit zip;
   inherit splitBy;
@@ -63,4 +68,6 @@ in {
   inherit enumerate;
   inherit safeElemAt;
   inherit orDefault;
+  inherit mod;
+  inherit pow;
 }
