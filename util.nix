@@ -24,8 +24,43 @@ let
         [ (first + (builtins.head others)) ] ++ (builtins.tail others);
 
   abs = num: if num >= 0 then num else -num;
+
+  chars = str:
+    if str == "" then
+      [ ]
+    else
+      let
+        curr = builtins.substring 0 1 str;
+        rest = builtins.substring 1 (builtins.stringLength str - 1) str;
+      in [ curr ] ++ (chars rest);
+
+  enumerate = let
+    enumWithIndex = i: arr:
+      if arr == [ ] then
+        [ ]
+      else
+        let
+          item = builtins.head arr;
+          rest = builtins.tail arr;
+        in [{
+          inherit i;
+          inherit item;
+        }] ++ (enumWithIndex (i + 1) rest);
+  in enumWithIndex 0;
+
+  safeElemAt = index: arr:
+    if index >= 0 && index < (builtins.length arr) then {
+      val = builtins.elemAt arr index;
+    } else
+      { };
+
+  orDefault = option: val: if option ? val then option.val else val;
 in {
-  zip = zip;
-  splitBy = splitBy;
-  abs = abs;
+  inherit zip;
+  inherit splitBy;
+  inherit abs;
+  inherit chars;
+  inherit enumerate;
+  inherit safeElemAt;
+  inherit orDefault;
 }
