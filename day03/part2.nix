@@ -9,8 +9,8 @@ let
     in ans;
 in input:
 let
-  # input in this case is a result from regex101 with regex
-  # mul\(\d+,\d+\)
+  # input in this case is a result from regex101
+  # with regex: mul\(\d+,\d+\)|don\'t\(\)|do\(\)
   lines = util.splitBy "\n" input;
 
   ans = (builtins.foldl' ({ active, total }:

@@ -9,8 +9,8 @@ let
     in ans;
 in input:
 let
-  # input in this case is a result from regex101 with regex
-  # mul\(\d+,\d+\)
+  # input in this case is a result from regex101 (since regex in nix is pretty strange)
+  # with regex: mul\(\d+,\d+\)
   lines = util.splitBy "\n" input;
   ans = builtins.foldl' (total: line: total + (evalMul line)) 0 lines;
 in ans
