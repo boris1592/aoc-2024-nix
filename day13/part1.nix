@@ -54,7 +54,8 @@ let
         aPushes * 3 + bPushes
       else if rem > 0 then
         findMinCost (aPushes + 1) arg
-      else 0;
+      else
+        0;
     in ans;
 
   ans = builtins.foldl' (total: curr: total + findMinCost 0 curr) 0 machines;
