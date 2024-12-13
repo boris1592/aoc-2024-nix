@@ -1,52 +1,24 @@
 let
   zip = a: b:
-    if a == [ ] then
-      [ ]
-    else
-      [{
-        a = builtins.head a;
-        b = builtins.head b;
-      }] ++ (zip (builtins.tail a) (builtins.tail b));
+    builtins.genList (i: {
+      a = builtins.elemAt a i;
+      b = builtins.elemAt b i;
+    }) (builtins.length a);
 
   splitBy = delim: str:
-    if str == "" then
-      [ ]
-    else
-      let
-        first = builtins.substring 0 1 str;
-        rest = builtins.substring 1 (builtins.stringLength str - 1) str;
-        others = splitBy delim rest;
-      in if first == delim then
-        if builtins.head others == "" then others else [ "" ] ++ others
-      else if others == [ ] then
-        [ first ]
-      else
-        [ (first + (builtins.head others)) ] ++ (builtins.tail others);
+    let whoThoughtOfThis = builtins.split delim str;
+    in builtins.filter (item: builtins.isString item && item != "")
+    whoThoughtOfThis;
 
   abs = num: if num >= 0 then num else -num;
 
-  chars = str:
-    if str == "" then
-      [ ]
-    else
-      let
-        curr = builtins.substring 0 1 str;
-        rest = builtins.substring 1 (builtins.stringLength str - 1) str;
-      in [ curr ] ++ (chars rest);
+  chars = splitBy "";
 
-  enumerate = let
-    enumWithIndex = i: arr:
-      if arr == [ ] then
-        [ ]
-      else
-        let
-          item = builtins.head arr;
-          rest = builtins.tail arr;
-        in [{
-          inherit i;
-          inherit item;
-        }] ++ (enumWithIndex (i + 1) rest);
-  in enumWithIndex 0;
+  enumerate = arr:
+    builtins.genList (i: {
+      inherit i;
+      item = builtins.elemAt arr i;
+    }) (builtins.length arr);
 
   safeElemAt = index: arr:
     if index >= 0 && index < (builtins.length arr) then {
@@ -54,6 +26,7 @@ let
     } else
       { };
 
+  # didn't know about set.key ? default syntax while writing this
   orDefault = option: val: if option ? val then option.val else val;
 
   # this produces wrong output with negative numbers but i don't care
