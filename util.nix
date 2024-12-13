@@ -26,7 +26,7 @@ let
     } else
       { };
 
-  # didn't know about set.key ? default syntax while writing this
+  # didn't know about `set.key ? default` syntax while writing this
   orDefault = option: val: if option ? val then option.val else val;
 
   # this produces wrong output with negative numbers but i don't care

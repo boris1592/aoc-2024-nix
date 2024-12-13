@@ -11,6 +11,7 @@ Not all days were solved using nix yet, since I didn't come up with this brillia
 | [Day 1](https://adventofcode.com/2024/day/1)   | [day01](./day01/) | ⭐     | ⭐     |
 | [Day 2](https://adventofcode.com/2024/day/2)   | [day02](./day02/) | ⭐     | ⭐     |
 | [Day 3](https://adventofcode.com/2024/day/3)   | [day03](./day03/) | ⭐     | ⭐     |
+| [Day 6](https://adventofcode.com/2024/day/6)   | [day06](./day06/) | ⭐     | ⭐     |
 | [Day 7](https://adventofcode.com/2024/day/7)   | [day07](./day07/) | ⭐     | ⭐     |
 | [Day 8](https://adventofcode.com/2024/day/8)   | [day08](./day08/) | ⭐     | ⭐     |
 | [Day 10](https://adventofcode.com/2024/day/10) | [day10](./day10/) | ⭐     | ⭐     |
