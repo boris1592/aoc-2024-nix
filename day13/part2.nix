@@ -9,7 +9,7 @@ let
 
       strToXCord = str:
         builtins.fromJSON
-        (builtins.substring 2 (builtins.stringLength str - 3) str);
+        (builtins.substring 2 (builtins.stringLength str - 3) str) + 0.0;
 
       strToYCord = str:
         builtins.fromJSON
