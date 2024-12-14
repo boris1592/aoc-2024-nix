@@ -5,12 +5,16 @@ let
       b = builtins.elemAt b i;
     }) (builtins.length a);
 
-  splitBy = delim: str:
-    let whoThoughtOfThis = builtins.split delim str;
-    in builtins.filter (item: builtins.isString item && item != "")
+  splitBy = delim: str: let
+    whoThoughtOfThis = builtins.split delim str;
+  in
+    builtins.filter (item: builtins.isString item && item != "")
     whoThoughtOfThis;
 
-  abs = num: if num >= 0 then num else -num;
+  abs = num:
+    if num >= 0
+    then num
+    else -num;
 
   chars = splitBy "";
 
@@ -21,18 +25,25 @@ let
     }) (builtins.length arr);
 
   safeElemAt = index: arr:
-    if index >= 0 && index < (builtins.length arr) then {
+    if index >= 0 && index < (builtins.length arr)
+    then {
       val = builtins.elemAt arr index;
-    } else
-      { };
+    }
+    else {};
 
   # didn't know about `set.key ? default` syntax while writing this
-  orDefault = option: val: if option ? val then option.val else val;
+  orDefault = option: val:
+    if option ? val
+    then option.val
+    else val;
 
   # this produces wrong output with negative numbers but i don't care
   mod = a: b: let c = a / b; in a - b * c;
 
-  pow = a: b: if b < 1 then 1 else a * (pow a (b - 1));
+  pow = a: b:
+    if b < 1
+    then 1
+    else a * (pow a (b - 1));
 in {
   inherit zip;
   inherit splitBy;
