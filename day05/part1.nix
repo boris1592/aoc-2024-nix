@@ -47,6 +47,7 @@ in
         if isOk
         then midElem
         else 0
-      )) 0 (util.enumerate updateSets);
+      ))
+    0 (util.enumerate updateSets);
   in
     ans

@@ -97,6 +97,8 @@ in
             inherit col;
           } {})
           .ans
-        else sum) s (util.enumerate line)) 0 (util.enumerate field);
+        else sum)
+      s (util.enumerate line))
+    0 (util.enumerate field);
   in
     ans

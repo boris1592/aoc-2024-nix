@@ -52,7 +52,8 @@ in
           in
             if nextVal == value
             then dfs next visited id
-            else visited) visited'
+            else visited)
+        visited'
         cells;
 
     groups =
@@ -82,7 +83,8 @@ in
         in {
           visited = visited';
           lastId = lastId';
-        }) state (util.enumerate line)) {
+        })
+        state (util.enumerate line)) {
         lastId = 0;
         visited = {};
       } (util.enumerate field))
@@ -169,7 +171,8 @@ in
           else 0;
         total' = total // {${groupStr} = count + corners;};
       in
-        total') total (util.enumerate line)) {} (util.enumerate field);
+        total')
+      total (util.enumerate line)) {} (util.enumerate field);
 
     ans =
       builtins.foldl' (sum: group: sides.${group} * areas.${group} + sum) 0

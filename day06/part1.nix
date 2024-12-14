@@ -54,7 +54,8 @@ in
           then field // {start = coord;}
           else field;
       in
-        field') field (util.enumerate (util.chars line))) {}
+        field')
+      field (util.enumerate (util.chars line))) {}
     (util.enumerate (util.splitBy "\n" input));
 
     steps = builtins.genericClosure {

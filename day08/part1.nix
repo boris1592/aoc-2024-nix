@@ -30,7 +30,8 @@ in
                 ++ other;
             };
       in
-        g') g (util.enumerate line)) {}
+        g')
+      g (util.enumerate line)) {}
     (util.enumerate (util.splitBy "\n" input));
 
     antinodes = builtins.foldl' (set: antennas: let

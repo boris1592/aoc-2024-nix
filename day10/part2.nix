@@ -50,13 +50,16 @@ in
       h = height curr;
       cells = neighbors curr;
 
-      rest = builtins.foldl' (total: c: let
-        res = dfs c;
-        h' = height c;
-      in
-        if h' == h + 1
-        then total + res
-        else total) 0 cells;
+      rest =
+        builtins.foldl' (total: c: let
+          res = dfs c;
+          h' = height c;
+        in
+          if h' == h + 1
+          then total + res
+          else total)
+        0
+        cells;
     in
       if h < 0
       then 0
@@ -79,6 +82,8 @@ in
             inherit row;
             inherit col;
           })
-        else sum) s (util.enumerate line)) 0 (util.enumerate field);
+        else sum)
+      s (util.enumerate line))
+    0 (util.enumerate field);
   in
     ans

@@ -31,7 +31,8 @@ in
                 ++ other;
             };
       in
-        g') g (util.enumerate line)) {}
+        g')
+      g (util.enumerate line)) {}
     (util.enumerate (util.splitBy "\n" input));
 
     findAntinodes = let

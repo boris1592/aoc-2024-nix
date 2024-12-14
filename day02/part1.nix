@@ -21,7 +21,8 @@ let
     diffOk = allWithPrev (prev: curr: let
       diff = util.abs (prev - curr);
     in
-      diff >= 1 && diff <= 3) nums;
+      diff >= 1 && diff <= 3)
+    nums;
   in
     diffOk && (isAsc || isDesc);
 in

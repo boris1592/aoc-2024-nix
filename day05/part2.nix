@@ -39,7 +39,8 @@ in
           right = b;
         };
       in
-        ruleSet ? ${key}) updateList;
+        ruleSet ? ${key})
+      updateList;
 
       midElem = builtins.elemAt sorted (builtins.length updateList / 2);
       set = u.item;
@@ -61,6 +62,7 @@ in
         if isOk
         then 0
         else midElem
-      )) 0 (util.enumerate updateSets);
+      ))
+    0 (util.enumerate updateSets);
   in
     ans

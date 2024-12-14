@@ -31,14 +31,17 @@ let
     }
     else {};
 
-  # didn't know about `set.key ? default` syntax while writing this
+  # didn't know about `set.key or default` syntax while writing this
   orDefault = option: val:
     if option ? val
     then option.val
     else val;
 
-  # this produces wrong output with negative numbers but i don't care
-  mod = a: b: let c = a / b; in a - b * c;
+  mod = a: b: let
+    mod' = a: b: a - b * (a / b);
+    res = mod' ((mod' a b) + b) b;
+  in
+    res;
 
   pow = a: b:
     if b < 1
