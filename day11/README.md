@@ -1,6 +1,6 @@
 # Regarding part 2
 
-Solved the second part with zig initially. Pretty sure, it might be impossible with pure nix, since it doesn't have any efficient way of memoizing function return values (even though all of them are pure) like Haskell does. Nix just runs out of memory.
+Solved the second part with zig initially. I'm pretty sure that it might be impossible with pure nix since it doesn't have any efficient way of memoizing function return values (even though all of them are pure) like Haskell does. Nix just runs out of memory.
 
 By the way, here's a Haskell solution just to keep the pure FP spirit. It uses the [memoize](https://hackage.haskell.org/package/memoize) package.
 
