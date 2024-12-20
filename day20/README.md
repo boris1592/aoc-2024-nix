@@ -1,6 +1,7 @@
 # I gave up
 
-I spent an hour writing a solution in nix only to see that it might take 2 hours to compute the answer (even though there are only 140 * 140 * 1600 iterations). Wrote a solution in C++ in 5 mins and computed the answer in 500 ms. The pure FP spirit is dead right now. Here's the code:
+I spent an hour writing a solution for the second part in nix only to see that it might take 2 hours to compute the answer (even though there are only 140 \* 140 \* 1600 iterations). Wrote a solution in C++ in 5 mins and computed the answer in 500 ms. The pure FP spirit is dead right now. Here's the code:
+
 ```cpp
 #include <cstdint>
 #include <fstream>
