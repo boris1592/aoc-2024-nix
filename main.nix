@@ -1,5 +1,5 @@
 let
-  solve = import ./day18/part2.nix;
+  solve = import ./day20/part1.nix;
   input = builtins.readFile ./input;
 in
   solve input
