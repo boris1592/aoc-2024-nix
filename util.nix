@@ -47,6 +47,15 @@ let
     if b < 1
     then 1
     else a * (pow a (b - 1));
+
+  minBy = f: items:
+    if items == []
+    then null
+    else
+      builtins.foldl' (curr: next:
+        if f next < f curr
+        then next
+        else curr) (builtins.head items) (builtins.tail items);
 in {
   inherit zip;
   inherit splitBy;
@@ -57,4 +66,5 @@ in {
   inherit orDefault;
   inherit mod;
   inherit pow;
+  inherit minBy;
 }
