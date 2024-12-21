@@ -124,12 +124,9 @@ in
     lines = splitBy "\n" input;
     nums = map toNum lines;
 
-    paths = map (generateForPass "A") (map chars lines);
-    total = foldl' (total: {
-      a,
-      b,
-    }:
-      total + (length a) * b)
-    0 (zip paths nums);
+    lengths = map (p: length (generateForPass "A" p)) (map chars lines);
+    total =
+      foldl' (total: c: total + c.a * c.b)
+      0 (zip lengths nums);
   in
     total
