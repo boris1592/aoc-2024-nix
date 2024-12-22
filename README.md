@@ -16,7 +16,6 @@ Ain't no way I'm solving day 9 in a purely functional language. It was a mess ev
 | [Day 6](https://adventofcode.com/2024/day/6)   | [day06](./day06/) | ⭐     | ⭐     |
 | [Day 7](https://adventofcode.com/2024/day/7)   | [day07](./day07/) | ⭐     | ⭐     |
 | [Day 8](https://adventofcode.com/2024/day/8)   | [day08](./day08/) | ⭐     | ⭐     |
-| [Day 9](https://adventofcode.com/2024/day/9)   |                   |        |        |
 | [Day 10](https://adventofcode.com/2024/day/10) | [day10](./day10/) | ⭐     | ⭐     |
 | [Day 11](https://adventofcode.com/2024/day/11) | [day11](./day11/) | ⭐     |        |
 | [Day 12](https://adventofcode.com/2024/day/12) | [day12](./day12/) | ⭐     | ⭐     |
