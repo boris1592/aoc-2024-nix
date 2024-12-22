@@ -1,6 +1,6 @@
-# I gave up again
+# Pure FP spirit is dead...
 
-Nix runs out of memory because there's no way to store sequences' running total without clonning everything. I could probably do it in Haskell utilizing the State monad but I'm too lazy to install haskell on my desktop, so here is a rust solution:
+Nix runs out of memory because there's no way to store sequences' running total without clonning everything. I could probably do it in Haskell utilizing the State monad but I'm too lazy to install haskell on my desktop, so here is a Rust solution yet again:
 
 ```rust
 use std::{
