@@ -1,6 +1,6 @@
 # I gave up once again
 
-This time it isn't the language's fault (however I believe that nix would once again run out of memory trying to memoize this one), it's just that I've been thinking about the solution for such a long time I didn't have any mental capacity left to think functionally. So here's a solution in Rust:
+This time it isn't the language's fault (however I believe that nix would once again run out of memory trying to memoize this one), it's just that I've been thinking about the solution for such a long time I didn't have any mental capacity left to think functionally. So here's a part 2 solution in Rust:
 
 ```rust
 use std::{collections::HashMap, fs::read_to_string, io, sync::LazyLock};
