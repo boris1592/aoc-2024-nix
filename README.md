@@ -29,3 +29,4 @@ Ain't no way I'm solving day 9 in a purely functional language. It was a mess ev
 | [Day 20](https://adventofcode.com/2024/day/20) | [day20](./day20/) | ⭐     |        |
 | [Day 21](https://adventofcode.com/2024/day/21) | [day21](./day21/) | ⭐     |        |
 | [Day 22](https://adventofcode.com/2024/day/22) | [day22](./day22/) | ⭐     |        |
+| [Day 23](https://adventofcode.com/2024/day/23) | [day23](./day23/) | ⭐     |        |
