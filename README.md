@@ -4,7 +4,7 @@ This is one of the most cursed yet fun things I have ever done. Normal people us
 
 # Current progress
 
-Golden star means a solution in nix. A dark one means a solution in a different language (most likely rust or haskell). These non-nix solutions can also be found in this repo, check corresponding directories. No star means no solution.
+Bright star means a solution in nix. A dimmer one means a solution in a different language (most likely rust or haskell). These non-nix solutions can also be found in this repo, check corresponding directories. No star means no solution.
 
 | Day                                            | Solution          | Part 1 | Part 2 |
 | ---------------------------------------------- | ----------------- | ------ | ------ |
