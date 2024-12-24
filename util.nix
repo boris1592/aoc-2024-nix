@@ -57,14 +57,16 @@ let
         then next
         else curr) (builtins.head items) (builtins.tail items);
 in {
-  inherit zip;
-  inherit splitBy;
-  inherit abs;
-  inherit chars;
-  inherit enumerate;
-  inherit safeElemAt;
-  inherit orDefault;
-  inherit mod;
-  inherit pow;
-  inherit minBy;
+  inherit
+    zip
+    splitBy
+    abs
+    chars
+    enumerate
+    safeElemAt
+    orDefault
+    mod
+    pow
+    minBy
+    ;
 }
