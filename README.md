@@ -32,3 +32,4 @@ Bright star means a solution in nix. A dimmer one means a solution in a differen
 | [Day 22](https://adventofcode.com/2024/day/22) | [day22](./day22/) | ⭐     | ★      |
 | [Day 23](https://adventofcode.com/2024/day/23) | [day23](./day23/) | ⭐     | ★      |
 | [Day 24](https://adventofcode.com/2024/day/24) | [day24](./day24/) | ⭐     |        |
+| [Day 25](https://adventofcode.com/2024/day/25) | [day25](./day25/) | ⭐     |        |
